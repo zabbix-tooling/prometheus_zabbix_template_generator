@@ -35,12 +35,10 @@ class ZabbixItem:
 
     def _get_item_definition(self, item_template: dict, name: str, template_uuid: str) -> dict:
         new_item = copy.deepcopy(item_template)
-        from pprint import pprint
         new_item["uuid"] = str(uuid.uuid5(uuid.NAMESPACE_DNS, name + template_uuid)).replace("-", "")
         new_item["description"] = self.help
-        new_item["key"] = new_item["key"].replace("PROM2ZABBIX_ITEMNAME", self.label)
-        pprint(new_item)
-
+        new_item["key"] = new_item["key"].replace("PROM2ZABBIX_ITEM_KEY", self.label)
+        new_item["name"] = new_item["name"].replace("PROM2ZABBIX_ITEM_NAME", self.label)
         return new_item
 
 
@@ -95,6 +93,17 @@ class PrometheusExporterParser:
 
         new_template = copy.deepcopy(self.example_template)
         new_template["zabbix_export"]["date"] = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+        if name:
+            new_template["zabbix_export"]["templates"][0]["name"] = \
+                new_template["zabbix_export"]["templates"][0]["name"] \
+                    .replace("PROM2ZABBIX_TEMPLATE_NAME", name.title())
+            new_template["zabbix_export"]["templates"][0]["template"] = \
+                new_template["zabbix_export"]["templates"][0]["template"] \
+                    .replace("PROM2ZABBIX_TEMPLATE_NAME", name) \
+                    .replace(" ", "_").lower()
+        else:
+            name = "DEFAULT"
+
         item_template = new_template["zabbix_export"]["templates"][0]["items"][0]
 
         new_template["zabbix_export"]["templates"][0]["items"] = []

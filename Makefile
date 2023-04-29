@@ -54,11 +54,14 @@ test: deps
 	${venv} && PYTHONPATH=${PWD} pytest
 
 run: deps
-	@echo "use 'export INI_FILE=...; make -e run' to use other profiles'"
-	mkdir -p logs
-	${venv} && PYTHONPATH=prometheus_zabbix_template_generator ./prom2zabbix.py -c ${INI_FILE}
+	${venv} && PYTHONPATH=prometheus_zabbix_template_generator ./prom2zabbix.py \
+		--template example/zabbix_template.json \
+		--dump example/prometheus_example_output.txt \
+		--name "micronaut"
 
-check: lint type-check test
+
+
+check: type-check lint test
 .PHONY: check
 
 lint: deps
