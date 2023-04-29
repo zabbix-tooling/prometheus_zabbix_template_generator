@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prometheus_zabbix_template_generator"
+requires-python = ">3.10"
+dynamic = ["version"]
+dependencies = [
+    'mypy',
+    'flake8',
+    'pytest',
+    'coloredlogs',
+    'requests', 'types-requests',
+    'cached_property']
+
+[tool.setuptools]
+py-modules = []

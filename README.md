@@ -1,2 +1,2 @@
-# zabbix_template_generator
+# Prometheus Zabbix Template Generator
 This project generates zabbix templates from prometheus exporters

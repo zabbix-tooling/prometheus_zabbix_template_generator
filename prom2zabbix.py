@@ -2,7 +2,7 @@
 
 import argparse
 
-from prom2zabbix.parser import PrometheusExporterParser
+from prometheus_zabbix_template_generator.parser import PrometheusExporterParser
 
 parser = argparse.ArgumentParser()
 
