@@ -24,10 +24,10 @@ class ItemType(Enum):
 @dataclass
 class ZabbixItem:
     """Class for keeping track of an item in inventory."""
-    base_label: str = None
+    base_label: str = ""
     label: str = ""
-    type: str = None
-    help: str = None
+    type: str = ""
+    help: str = ""
     examples: list[str] = field(default_factory=list)
 
     def __str__(self):
@@ -44,7 +44,7 @@ class ZabbixItem:
 
 class PrometheusExporterParser:
 
-    def __init__(self, lines: list[str], example_template: str = None):
+    def __init__(self, lines: list[str], example_template: str | None = None):
         self.lines = lines
         self.state: ParserState = ParserState.START
         self.collected_items: dict[str, ZabbixItem] = {}
@@ -53,7 +53,7 @@ class PrometheusExporterParser:
                 self.example_template = json.load(f)
 
     def parse(self):
-        item: ZabbixItem = None
+        item: ZabbixItem | None = None
         for line_nr, line_str in enumerate(self.lines):
             line_str = line_str.strip()
             if self.state in [ParserState.START, ParserState.METRICS]:
@@ -89,18 +89,15 @@ class PrometheusExporterParser:
             template_uuid = str(uuid.uuid5(uuid.NAMESPACE_DNS, name)).replace("-", "")
             file_name = f"{name}.json".replace(" ", "_")
         else:
-            template_uuid = None
+            template_uuid = str(uuid.uuid4()).replace("-", "")
 
         new_template = copy.deepcopy(self.example_template)
         new_template["zabbix_export"]["date"] = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
         if name:
-            new_template["zabbix_export"]["templates"][0]["name"] = \
-                new_template["zabbix_export"]["templates"][0]["name"] \
-                    .replace("PROM2ZABBIX_TEMPLATE_NAME", name.title())
-            new_template["zabbix_export"]["templates"][0]["template"] = \
-                new_template["zabbix_export"]["templates"][0]["template"] \
-                    .replace("PROM2ZABBIX_TEMPLATE_NAME", name) \
-                    .replace(" ", "_").lower()
+            new_template["zabbix_export"]["templates"][0]["name"] = new_template["zabbix_export"]["templates"][0][
+                "name"].replace("PROM2ZABBIX_TEMPLATE_NAME", name.title())
+            new_template["zabbix_export"]["templates"][0]["template"] = new_template["zabbix_export"]["templates"][0][
+                "template"].replace("PROM2ZABBIX_TEMPLATE_NAME", name).replace(" ", "_").lower()
         else:
             name = "DEFAULT"
 

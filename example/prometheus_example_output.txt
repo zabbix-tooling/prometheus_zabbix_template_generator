@@ -1,0 +1,735 @@
+# HELP cache_gets_total The number of times cache lookup methods have returned a cached (hit) or uncached (newly loaded or null) value (miss).
+# TYPE cache_gets_total counter
+cache_gets_total{cache="users",result="hit",} 47192.0
+cache_gets_total{cache="chats",result="hit",} 3186.0
+cache_gets_total{cache="feature_toggles",result="hit",} 743967.0
+cache_gets_total{cache="messages",result="hit",} 2485.0
+cache_gets_total{cache="published_posts",result="miss",} 3058.0
+cache_gets_total{cache="tasks",result="hit",} 62.0
+cache_gets_total{cache="feature_toggles",result="miss",} 8241.0
+cache_gets_total{cache="chats",result="miss",} 1795.0
+cache_gets_total{cache="users",result="miss",} 4888.0
+cache_gets_total{cache="messages",result="miss",} 2496.0
+cache_gets_total{cache="post_comment",result="hit",} 1446.0
+cache_gets_total{cache="post_comment",result="miss",} 466.0
+cache_gets_total{cache="groups",result="miss",} 1752.0
+cache_gets_total{cache="tasks",result="miss",} 40.0
+cache_gets_total{cache="groups",result="hit",} 45583.0
+cache_gets_total{cache="published_posts",result="hit",} 44277.0
+# HELP jvm_threads_states_threads The current number of threads
+# TYPE jvm_threads_states_threads gauge
+jvm_threads_states_threads{state="blocked",} 0.0
+jvm_threads_states_threads{state="runnable",} 17.0
+jvm_threads_states_threads{state="waiting",} 10.0
+jvm_threads_states_threads{state="timed-waiting",} 19.0
+jvm_threads_states_threads{state="new",} 0.0
+jvm_threads_states_threads{state="terminated",} 0.0
+# HELP executor_queued_tasks The approximate number of tasks that are queued for execution
+# TYPE executor_queued_tasks gauge
+executor_queued_tasks{name="io",} 0.0
+executor_queued_tasks{name="scheduled",} 1.0
+executor_queued_tasks{name="consumer",} 0.0
+# HELP rabbitmq_published_total  
+# TYPE rabbitmq_published_total counter
+rabbitmq_published_total 95422.0
+# HELP jvm_classes_unloaded_classes_total The total number of classes unloaded since the Java virtual machine has started execution
+# TYPE jvm_classes_unloaded_classes_total counter
+jvm_classes_unloaded_classes_total 0.0
+# HELP hikaricp_connections Total connections
+# TYPE hikaricp_connections gauge
+hikaricp_connections{pool="HikariPool-1",} 14.0
+# HELP rabbitmq_connections  
+# TYPE rabbitmq_connections gauge
+rabbitmq_connections 1.0
+# HELP rabbitmq_rejected_total  
+# TYPE rabbitmq_rejected_total counter
+rabbitmq_rejected_total 0.0
+# HELP process_files_max_files The maximum file descriptor count
+# TYPE process_files_max_files gauge
+process_files_max_files 1048576.0
+# HELP jvm_threads_daemon_threads The current number of live daemon threads
+# TYPE jvm_threads_daemon_threads gauge
+jvm_threads_daemon_threads 18.0
+# HELP executor_active_threads The approximate number of threads that are actively executing tasks
+# TYPE executor_active_threads gauge
+executor_active_threads{name="io",} 3.0
+executor_active_threads{name="scheduled",} 0.0
+executor_active_threads{name="consumer",} 2.0
+# HELP executor_pool_size_threads The current number of threads in the pool
+# TYPE executor_pool_size_threads gauge
+executor_pool_size_threads{name="io",} 8.0
+executor_pool_size_threads{name="scheduled",} 6.0
+executor_pool_size_threads{name="consumer",} 2.0
+# HELP hikaricp_connections_min Min connections
+# TYPE hikaricp_connections_min gauge
+hikaricp_connections_min{pool="HikariPool-1",} 10.0
+# HELP jvm_buffer_count_buffers An estimate of the number of buffers in the pool
+# TYPE jvm_buffer_count_buffers gauge
+jvm_buffer_count_buffers{id="mapped - 'non-volatile memory'",} 0.0
+jvm_buffer_count_buffers{id="mapped",} 0.0
+jvm_buffer_count_buffers{id="direct",} 33.0
+# HELP jvm_memory_used_bytes The amount of used memory
+# TYPE jvm_memory_used_bytes gauge
+jvm_memory_used_bytes{area="heap",id="G1 Survivor Space",} 1.6597408E7
+jvm_memory_used_bytes{area="nonheap",id="CodeHeap 'profiled nmethods'",} 4.8822272E7
+jvm_memory_used_bytes{area="heap",id="G1 Old Gen",} 6.24700408E8
+jvm_memory_used_bytes{area="nonheap",id="Metaspace",} 1.4715088E8
+jvm_memory_used_bytes{area="heap",id="G1 Eden Space",} 1.92937984E8
+jvm_memory_used_bytes{area="nonheap",id="CodeHeap 'non-nmethods'",} 1677184.0
+jvm_memory_used_bytes{area="nonheap",id="Compressed Class Space",} 2.0444344E7
+jvm_memory_used_bytes{area="nonheap",id="CodeHeap 'non-profiled nmethods'",} 4.4479872E7
+# HELP rabbitmq_acknowledged_published_total  
+# TYPE rabbitmq_acknowledged_published_total counter
+rabbitmq_acknowledged_published_total 0.0
+# HELP executor_pool_max_threads The maximum allowed number of threads in the pool
+# TYPE executor_pool_max_threads gauge
+executor_pool_max_threads{name="io",} 2.147483647E9
+executor_pool_max_threads{name="scheduled",} 2.147483647E9
+executor_pool_max_threads{name="consumer",} 15.0
+# HELP hikaricp_connections_timeout_total Connection timeout total count
+# TYPE hikaricp_connections_timeout_total counter
+hikaricp_connections_timeout_total{pool="HikariPool-1",} 0.0
+# HELP hikaricp_connections_max Max connections
+# TYPE hikaricp_connections_max gauge
+hikaricp_connections_max{pool="HikariPool-1",} 30.0
+# HELP executor_pool_core_threads The core number of threads for the pool
+# TYPE executor_pool_core_threads gauge
+executor_pool_core_threads{name="io",} 0.0
+executor_pool_core_threads{name="scheduled",} 6.0
+executor_pool_core_threads{name="consumer",} 15.0
+# HELP http_server_requests_seconds  
+# TYPE http_server_requests_seconds summary
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v2/users/@me/logged-in",} 310.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v2/users/@me/logged-in",} 1.428102107
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}",} 25.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}",} 0.056143068
+http_server_requests_seconds_count{exception="none",method="POST",status="201",uri="/api/v2/users/@me/bookmarks",} 30.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="201",uri="/api/v2/users/@me/bookmarks",} 0.188146021
+http_server_requests_seconds_count{exception="none",method="PUT",status="200",uri="/api/v1/chats/{chatId}",} 1.0
+http_server_requests_seconds_sum{exception="none",method="PUT",status="200",uri="/api/v1/chats/{chatId}",} 0.086780235
+http_server_requests_seconds_count{exception="none",method="PATCH",status="200",uri="/api/v1/groups/{groupId}/member-settings/@me",} 18.0
+http_server_requests_seconds_sum{exception="none",method="PATCH",status="200",uri="/api/v1/groups/{groupId}/member-settings/@me",} 0.139090993
+http_server_requests_seconds_count{exception="none",method="PUT",status="200",uri="/api/v2/users/@me/absences/{absence_id}",} 3.0
+http_server_requests_seconds_sum{exception="none",method="PUT",status="200",uri="/api/v2/users/@me/absences/{absence_id}",} 0.028074775
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/reactions-v2/users",} 3762.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/reactions-v2/users",} 22.923932723
+http_server_requests_seconds_count{exception="none",method="POST",status="202",uri="/api/external/v2/sync/users",} 835.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="202",uri="/api/external/v2/sync/users",} 8.044010418
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/external/v1/sync/groups{?pageSize,page}",} 43.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/external/v1/sync/groups{?pageSize,page}",} 1.052967901
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/prometheus",} 2049.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/prometheus",} 6.104618166
+http_server_requests_seconds_count{exception="none",method="PATCH",status="200",uri="/api/v1/chats/{chatId}/member-settings/@me",} 32.0
+http_server_requests_seconds_sum{exception="none",method="PATCH",status="200",uri="/api/v1/chats/{chatId}/member-settings/@me",} 0.254213012
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/groups/open",} 84.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/groups/open",} 2.101858503
+http_server_requests_seconds_count{exception="none",method="POST",status="202",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/translations",} 21.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="202",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/translations",} 0.75054115
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v2/menu-items/@me",} 26850.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v2/menu-items/@me",} 75.870661483
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/translations",} 123.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/translations",} 1.203199734
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/external/sync/v3/users{?page_size,page}",} 2.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/external/sync/v3/users{?page_size,page}",} 0.037991127
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/metabase",} 3.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/metabase",} 0.013258607
+http_server_requests_seconds_count{exception="none",method="PUT",status="200",uri="/api/v1/files/media-conversions/{mediaId}",} 29.0
+http_server_requests_seconds_sum{exception="none",method="PUT",status="200",uri="/api/v1/files/media-conversions/{mediaId}",} 0.272816051
+http_server_requests_seconds_count{exception="none",method="DELETE",status="200",uri="/api/v1/chats/{chatId}/messages/{messageId}",} 32.0
+http_server_requests_seconds_sum{exception="none",method="DELETE",status="200",uri="/api/v1/chats/{chatId}/messages/{messageId}",} 0.358643422
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/calendars/{calendarOwnerId}/{eventId}",} 4.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/calendars/{calendarOwnerId}/{eventId}",} 0.019551655
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/comments",} 15046.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/comments",} 72.076693654
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v2/users/@me/groups",} 42439.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v2/users/@me/groups",} 3877.094518569
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/chats/{chatId}/messages",} 7904.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/chats/{chatId}/messages",} 72.349649336
+http_server_requests_seconds_count{exception="none",method="GET",status="410",uri="/api/v1/groups/{groupId}/posts/{postId}",} 109.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="410",uri="/api/v1/groups/{groupId}/posts/{postId}",} 0.311512368
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/internal/tenants/{tenant}/chats/{chatId}/members",} 1758.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/internal/tenants/{tenant}/chats/{chatId}/members",} 3.103712818
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/tasks/{taskId}/comments",} 36.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/tasks/{taskId}/comments",} 0.178607524
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/reactions/users",} 101.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/reactions/users",} 1.808880595
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/activities/last-seen",} 86.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/activities/last-seen",} 0.453184561
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/messages/{messageId}",} 4981.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/messages/{messageId}",} 16.426144814
+http_server_requests_seconds_count{exception="none",method="POST",status="201",uri="/api/v1/groups/{groupId}/posts/{postId}/comments",} 146.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="201",uri="/api/v1/groups/{groupId}/posts/{postId}/comments",} 4.398347656
+http_server_requests_seconds_count{exception="none",method="POST",status="201",uri="/api/v1/chats/{chatId}/messages",} 1319.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="201",uri="/api/v1/chats/{chatId}/messages",} 87.200483595
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/menu-items/@me",} 10.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/menu-items/@me",} 0.036636064
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/chats/{chatId}/members-v2",} 4958.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/chats/{chatId}/members-v2",} 37.48677248
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v2/users/short-profiles",} 27549.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v2/users/short-profiles",} 120.40077588
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/files/media-conversions",} 64.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/files/media-conversions",} 0.409523566
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/chats/{chatId}/messages/{messageId}/reactions/{reactionType}/@me",} 87.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/chats/{chatId}/messages/{messageId}/reactions/{reactionType}/@me",} 0.522597843
+http_server_requests_seconds_count{exception="none",method="GET",status="410",uri="/api/v2/users/{userId}",} 7.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="410",uri="/api/v2/users/{userId}",} 0.014067471
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/searches",} 9073.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/searches",} 388.157997612
+http_server_requests_seconds_count{exception="none",method="POST",status="400",uri="/api/v1/groups/{groupId}/posts/{postId}/translations",} 1.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="400",uri="/api/v1/groups/{groupId}/posts/{postId}/translations",} 0.011251317
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/metrics",} 3.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/metrics",} 0.006004173
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/internal/tenants/{tenant}/groups/{groupId}/members",} 4821.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/internal/tenants/{tenant}/groups/{groupId}/members",} 32.195177488
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v2/menu-items/{menuItemId}/groups",} 1.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v2/menu-items/{menuItemId}/groups",} 0.011386319
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v2/users/short-profiles",} 5763.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v2/users/short-profiles",} 148.433374723
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/internal/metrics/technical",} 47.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/internal/metrics/technical",} 0.120283098
+http_server_requests_seconds_count{exception="none",method="GET",status="410",uri="/api/external/post/v1/posts/{postId}/post-seen-count",} 1.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="410",uri="/api/external/post/v1/posts/{postId}/post-seen-count",} 0.003373578
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/comments/{commentId}",} 1910.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/comments/{commentId}",} 7.668090437
+http_server_requests_seconds_count{exception="none",method="GET",status="404",uri="NOT_FOUND",} 769.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="404",uri="NOT_FOUND",} 2.069981975
+http_server_requests_seconds_count{exception="none",method="DELETE",status="200",uri="/api/v1/chats/{chatId}/members/@me",} 3.0
+http_server_requests_seconds_sum{exception="none",method="DELETE",status="200",uri="/api/v1/chats/{chatId}/members/@me",} 0.024428111
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/tasks/{taskId}/comments/{commentId}",} 12.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/tasks/{taskId}/comments/{commentId}",} 0.057362039
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/external/v1/requests/{request_context}{?since}",} 1.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/external/v1/requests/{request_context}{?since}",} 0.006993515
+http_server_requests_seconds_count{exception="none",method="POST",status="201",uri="/api/v1/groups/{groupId}/posts/{postId}/reactions/{reactionType}/@me",} 599.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="201",uri="/api/v1/groups/{groupId}/posts/{postId}/reactions/{reactionType}/@me",} 12.945488796
+http_server_requests_seconds_count{exception="none",method="DELETE",status="204",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/reactions/@me",} 1.0
+http_server_requests_seconds_sum{exception="none",method="DELETE",status="204",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/reactions/@me",} 0.024118351
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/external/v1/requests/{request_context}/errors{?since,cursor}",} 1.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/external/v1/requests/{request_context}/errors{?since,cursor}",} 0.009295948
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v2/menu-items/{menuItemId}/groups",} 1.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v2/menu-items/{menuItemId}/groups",} 0.01559717
+http_server_requests_seconds_count{exception="none",method="PATCH",status="200",uri="/api/v1/tasks/{taskId}",} 4.0
+http_server_requests_seconds_sum{exception="none",method="PATCH",status="200",uri="/api/v1/tasks/{taskId}",} 0.084067909
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/external/post/v1/posts/{postId}",} 130.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/external/post/v1/posts/{postId}",} 3.943079204
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/tasks/{taskId}",} 90.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/tasks/{taskId}",} 0.280061866
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/internal/tenants/{tenant}/tasks/{taskId}/members",} 48.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/internal/tenants/{tenant}/tasks/{taskId}/members",} 0.144327361
+http_server_requests_seconds_count{exception="none",method="GET",status="403",uri="/api/v1/chats/{chatId}/members-v2",} 1.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="403",uri="/api/v1/chats/{chatId}/members-v2",} 0.002185726
+http_server_requests_seconds_count{exception="none",method="DELETE",status="204",uri="/api/v2/users/@me/bookmarks/{post_id}",} 4.0
+http_server_requests_seconds_sum{exception="none",method="DELETE",status="204",uri="/api/v2/users/@me/bookmarks/{post_id}",} 0.015814715
+http_server_requests_seconds_count{exception="none",method="PATCH",status="200",uri="/api/v1/chats/{chatId}/members",} 9.0
+http_server_requests_seconds_sum{exception="none",method="PATCH",status="200",uri="/api/v1/chats/{chatId}/members",} 0.085257215
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/posts",} 107.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/posts",} 36.327474386
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v2/users/@me/bookmarks",} 12969.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v2/users/@me/bookmarks",} 22.938664149
+http_server_requests_seconds_count{exception="none",method="PUT",status="200",uri="/api/v2/users/@me/profile",} 39.0
+http_server_requests_seconds_sum{exception="none",method="PUT",status="200",uri="/api/v2/users/@me/profile",} 1.382657436
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v2/users/@me",} 13775.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v2/users/@me",} 26.306232402
+http_server_requests_seconds_count{exception="none",method="DELETE",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}",} 13.0
+http_server_requests_seconds_sum{exception="none",method="DELETE",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}",} 0.329891748
+http_server_requests_seconds_count{exception="none",method="DELETE",status="200",uri="/internal/keycloak/users/{userId}",} 23.0
+http_server_requests_seconds_sum{exception="none",method="DELETE",status="200",uri="/internal/keycloak/users/{userId}",} 0.910937524
+http_server_requests_seconds_count{exception="none",method="PUT",status="410",uri="/api/v1/tasks/{taskId}/recipients/@me",} 21.0
+http_server_requests_seconds_sum{exception="none",method="PUT",status="410",uri="/api/v1/tasks/{taskId}/recipients/@me",} 0.058108888
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/files/video-conversions/{videoId}",} 10.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/files/video-conversions/{videoId}",} 0.018100174
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/last-seen",} 3845.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/last-seen",} 23.641051194
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/external/v2/sync/users/group-memberships",} 517.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/external/v2/sync/users/group-memberships",} 966.852982244
+http_server_requests_seconds_count{exception="none",method="POST",status="202",uri="/api/external/v1/sync/users/delete",} 86.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="202",uri="/api/external/v1/sync/users/delete",} 0.466342379
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/internal/tenants/{tenant}/events/{eventId}/members",} 2.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/internal/tenants/{tenant}/events/{eventId}/members",} 0.009196842
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/openapi/external/sync",} 1.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/openapi/external/sync",} 0.001549617
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/internal/users/rejected",} 52.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/internal/users/rejected",} 10.119651078
+http_server_requests_seconds_count{exception="none",method="PUT",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}",} 32.0
+http_server_requests_seconds_sum{exception="none",method="PUT",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}",} 2.148534507
+http_server_requests_seconds_count{exception="none",method="GET",status="410",uri="/api/v1/groups/{groupId}/posts/{postId}/reactions-v2/users",} 2.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="410",uri="/api/v1/groups/{groupId}/posts/{postId}/reactions-v2/users",} 0.007580998
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/chats",} 28475.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/chats",} 2355.130317136
+http_server_requests_seconds_count{exception="none",method="DELETE",status="200",uri="/api/v1/tasks/{taskId}",} 2.0
+http_server_requests_seconds_sum{exception="none",method="DELETE",status="200",uri="/api/v1/tasks/{taskId}",} 0.2810876
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/internal/metrics",} 22.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/internal/metrics",} 82.462933147
+http_server_requests_seconds_count{exception="none",method="POST",status="201",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/reactions/{reactionType}/@me",} 38.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="201",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/reactions/{reactionType}/@me",} 0.719323904
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/post-seens",} 12979.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/post-seens",} 14.0051346
+http_server_requests_seconds_count{exception="none",method="GET",status="401",uri="/api/v1/content/notifications/posts/{postId}",} 5.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="401",uri="/api/v1/content/notifications/posts/{postId}",} 0.022906247
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/groups",} 2.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/groups",} 0.02986342
+http_server_requests_seconds_count{exception="none",method="POST",status="201",uri="/api/external/post/v1/posts",} 17.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="201",uri="/api/external/post/v1/posts",} 0.742585478
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/external/v1/sync/users/{externalId}",} 637.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/external/v1/sync/users/{externalId}",} 1.197853212
+http_server_requests_seconds_count{exception="none",method="POST",status="202",uri="/api/v1/chats/{chatId}/messages/{messageId}/translations",} 6.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="202",uri="/api/v1/chats/{chatId}/messages/{messageId}/translations",} 0.058687812
+http_server_requests_seconds_count{exception="none",method="PATCH",status="200",uri="/api/v1/tasks/{taskId}/recipients",} 2.0
+http_server_requests_seconds_sum{exception="none",method="PATCH",status="200",uri="/api/v1/tasks/{taskId}/recipients",} 0.048286112
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts",} 6855.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts",} 279.649796159
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/external/post/v1/posts",} 146.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/external/post/v1/posts",} 0.931184506
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/tasks/{taskId}/recipients-v2",} 8.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/tasks/{taskId}/recipients-v2",} 0.054909521
+http_server_requests_seconds_count{exception="none",method="POST",status="201",uri="/api/v1/chats",} 115.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="201",uri="/api/v1/chats",} 1.476842074
+http_server_requests_seconds_count{exception="none",method="PATCH",status="200",uri="/internal/keycloak/users/{userId}",} 1.0
+http_server_requests_seconds_sum{exception="none",method="PATCH",status="200",uri="/internal/keycloak/users/{userId}",} 0.020197837
+http_server_requests_seconds_count{exception="none",method="POST",status="202",uri="/api/external/v1/sync/groups",} 3.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="202",uri="/api/external/v1/sync/groups",} 0.128778451
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v2/menu-items/{menuItemId}",} 15.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v2/menu-items/{menuItemId}",} 0.038400872
+http_server_requests_seconds_count{exception="none",method="POST",status="202",uri="/api/external/sync/v3/users",} 392.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="202",uri="/api/external/sync/v3/users",} 4.558574095
+http_server_requests_seconds_count{exception="none",method="GET",status="410",uri="/api/v1/groups/{groupId}/posts/{postId}/comments",} 49.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="410",uri="/api/v1/groups/{groupId}/posts/{postId}/comments",} 0.178112264
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/leave",} 4.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/leave",} 0.02865622
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/join",} 3.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/join",} 0.033762568
+http_server_requests_seconds_count{exception="none",method="DELETE",status="204",uri="/api/v1/groups/{groupId}/posts/{postId}/reactions/@me",} 47.0
+http_server_requests_seconds_sum{exception="none",method="DELETE",status="204",uri="/api/v1/groups/{groupId}/posts/{postId}/reactions/@me",} 0.53784617
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}",} 18463.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}",} 131.428199247
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/internal/keycloak/users/{userId}",} 31418.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/internal/keycloak/users/{userId}",} 51.007443684
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/groups",} 21.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/groups",} 0.410414553
+http_server_requests_seconds_count{exception="none",method="DELETE",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}",} 3.0
+http_server_requests_seconds_sum{exception="none",method="DELETE",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}",} 0.127664848
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/content/newsfeed/last-seen",} 48426.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/content/newsfeed/last-seen",} 239.656803856
+http_server_requests_seconds_count{exception="none",method="POST",status="201",uri="/api/v2/users/@me/absences",} 3.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="201",uri="/api/v2/users/@me/absences",} 0.017506403
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v2/menu-items",} 11.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v2/menu-items",} 0.044226307
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/external/post/v1/posts/{postId}/post-seen-count",} 1075.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/external/post/v1/posts/{postId}/post-seen-count",} 6.916495607
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/internal/keycloak/users",} 3.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/internal/keycloak/users",} 0.009340129
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/chats/{chatId}/messages/{messageId}/reactions/users",} 203.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/chats/{chatId}/messages/{messageId}/reactions/users",} 1.328914416
+http_server_requests_seconds_count{exception="none",method="GET",status="403",uri="/api/v1/groups/{groupId}/posts/{postId}/comments",} 1.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="403",uri="/api/v1/groups/{groupId}/posts/{postId}/comments",} 0.004788265
+http_server_requests_seconds_count{exception="none",method="PUT",status="200",uri="/api/v2/menu-items/{menuItemId}",} 3.0
+http_server_requests_seconds_sum{exception="none",method="PUT",status="200",uri="/api/v2/menu-items/{menuItemId}",} 0.035659964
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v2/users/{userId}",} 1833.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v2/users/{userId}",} 6.128695961
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/chats/{chatId}/messages/{messageId}/translations",} 11.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/chats/{chatId}/messages/{messageId}/translations",} 0.059319229
+http_server_requests_seconds_count{exception="none",method="POST",status="201",uri="/api/v2/menu-items",} 1.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="201",uri="/api/v2/menu-items",} 0.037534577
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/calendars/events/{eventId}",} 1.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/calendars/events/{eventId}",} 0.0106126
+http_server_requests_seconds_count{exception="none",method="GET",status="403",uri="/api/v1/chats/{chatId}/messages",} 2.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="403",uri="/api/v1/chats/{chatId}/messages",} 0.006650578
+http_server_requests_seconds_count{exception="none",method="POST",status="202",uri="/api/v1/groups/{groupId}/posts/{postId}/translations",} 12.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="202",uri="/api/v1/groups/{groupId}/posts/{postId}/translations",} 0.137071073
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/tasks/completed",} 408.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/tasks/completed",} 2.761155873
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/files/media-conversions/{mediaId}",} 584.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/files/media-conversions/{mediaId}",} 1.102203734
+http_server_requests_seconds_count{exception="none",method="PUT",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/surveys/votes",} 60.0
+http_server_requests_seconds_sum{exception="none",method="PUT",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/surveys/votes",} 1.029118134
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/external/v1/sync/users{?pageSize,page}",} 34.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/external/v1/sync/users{?pageSize,page}",} 1.380754197
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/translations",} 46.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/translations",} 1.404860132
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/content/newsfeed",} 40500.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/content/newsfeed",} 1211.525239547
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/health",} 2048.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/health",} 4.074732624
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/files/upload-urls",} 859.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/files/upload-urls",} 1.797241105
+http_server_requests_seconds_count{exception="none",method="POST",status="201",uri="/api/v1/calendars/{calendarOwnerId}",} 1.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="201",uri="/api/v1/calendars/{calendarOwnerId}",} 0.021291455
+http_server_requests_seconds_count{exception="none",method="DELETE",status="204",uri="/api/v1/chats/{chatId}/messages/{messageId}/reactions/@me",} 1.0
+http_server_requests_seconds_sum{exception="none",method="DELETE",status="204",uri="/api/v1/chats/{chatId}/messages/{messageId}/reactions/@me",} 0.012930119
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/activities",} 14022.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/activities",} 255.12436797
+http_server_requests_seconds_count{exception="none",method="PATCH",status="410",uri="/api/v1/tasks/{taskId}",} 1.0
+http_server_requests_seconds_sum{exception="none",method="PATCH",status="410",uri="/api/v1/tasks/{taskId}",} 0.005302563
+http_server_requests_seconds_count{exception="none",method="POST",status="201",uri="/api/v1/tasks",} 18.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="201",uri="/api/v1/tasks",} 1.2734881
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/settings/notification/quiet-time",} 1.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/settings/notification/quiet-time",} 0.006570088
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v1/chats/{chatId}/last-seen",} 2905.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v1/chats/{chatId}/last-seen",} 15.915841793
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v2/users/@me/absences",} 389.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v2/users/@me/absences",} 1.137328718
+http_server_requests_seconds_count{exception="none",method="POST",status="200",uri="/api/v2/users/@me/devices",} 9288.0
+http_server_requests_seconds_sum{exception="none",method="POST",status="200",uri="/api/v2/users/@me/devices",} 49.424503879
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/tasks",} 36894.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/tasks",} 163.259776829
+http_server_requests_seconds_count{exception="none",method="PUT",status="200",uri="/api/v1/tasks/{taskId}/recipients/@me",} 123.0
+http_server_requests_seconds_sum{exception="none",method="PUT",status="200",uri="/api/v1/tasks/{taskId}/recipients/@me",} 1.30060036
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/external/post/v2/posts",} 113.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/external/post/v2/posts",} 0.444376442
+http_server_requests_seconds_count{exception="none",method="PATCH",status="200",uri="/api/v1/groups/{groupId}/members",} 10.0
+http_server_requests_seconds_sum{exception="none",method="PATCH",status="200",uri="/api/v1/groups/{groupId}/members",} 0.140032224
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/posts/{postId}",} 45084.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/posts/{postId}",} 82.334615544
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/members-v2",} 613.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/members-v2",} 30.994879243
+http_server_requests_seconds_count{exception="none",method="GET",status="200",uri="/api/v1/calendars/{calendarOwnerId}",} 7795.0
+http_server_requests_seconds_sum{exception="none",method="GET",status="200",uri="/api/v1/calendars/{calendarOwnerId}",} 29.528019742
+# HELP http_server_requests_seconds_max  
+# TYPE http_server_requests_seconds_max gauge
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v2/users/@me/logged-in",} 0.005350267
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="201",uri="/api/v2/users/@me/bookmarks",} 0.006433386
+http_server_requests_seconds_max{exception="none",method="PUT",status="200",uri="/api/v1/chats/{chatId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="PATCH",status="200",uri="/api/v1/groups/{groupId}/member-settings/@me",} 0.0
+http_server_requests_seconds_max{exception="none",method="PUT",status="200",uri="/api/v2/users/@me/absences/{absence_id}",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/reactions-v2/users",} 0.006599208
+http_server_requests_seconds_max{exception="none",method="POST",status="202",uri="/api/external/v2/sync/users",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/external/v1/sync/groups{?pageSize,page}",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/prometheus",} 0.002907332
+http_server_requests_seconds_max{exception="none",method="PATCH",status="200",uri="/api/v1/chats/{chatId}/member-settings/@me",} 0.004684549
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/groups/open",} 0.019698563
+http_server_requests_seconds_max{exception="none",method="POST",status="202",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/translations",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v2/menu-items/@me",} 0.011133682
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/translations",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/external/sync/v3/users{?page_size,page}",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/metabase",} 0.0
+http_server_requests_seconds_max{exception="none",method="PUT",status="200",uri="/api/v1/files/media-conversions/{mediaId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="DELETE",status="200",uri="/api/v1/chats/{chatId}/messages/{messageId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/calendars/{calendarOwnerId}/{eventId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/comments",} 0.008864998
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v2/users/@me/groups",} 0.317842391
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/chats/{chatId}/messages",} 0.023137411
+http_server_requests_seconds_max{exception="none",method="GET",status="410",uri="/api/v1/groups/{groupId}/posts/{postId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/internal/tenants/{tenant}/chats/{chatId}/members",} 0.002050134
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/tasks/{taskId}/comments",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/reactions/users",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/activities/last-seen",} 0.00442677
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/messages/{messageId}",} 0.006294603
+http_server_requests_seconds_max{exception="none",method="POST",status="201",uri="/api/v1/groups/{groupId}/posts/{postId}/comments",} 0.019602365
+http_server_requests_seconds_max{exception="none",method="POST",status="201",uri="/api/v1/chats/{chatId}/messages",} 0.31848674
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/menu-items/@me",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/chats/{chatId}/members-v2",} 0.009886961
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v2/users/short-profiles",} 0.015846594
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/files/media-conversions",} 0.009207231
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/chats/{chatId}/messages/{messageId}/reactions/{reactionType}/@me",} 0.00448046
+http_server_requests_seconds_max{exception="none",method="GET",status="410",uri="/api/v2/users/{userId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/searches",} 0.351536403
+http_server_requests_seconds_max{exception="none",method="POST",status="400",uri="/api/v1/groups/{groupId}/posts/{postId}/translations",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/metrics",} 0.004603951
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/internal/tenants/{tenant}/groups/{groupId}/members",} 0.019604105
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v2/menu-items/{menuItemId}/groups",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v2/users/short-profiles",} 0.040050822
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/internal/metrics/technical",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="410",uri="/api/external/post/v1/posts/{postId}/post-seen-count",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/comments/{commentId}",} 0.010214125
+http_server_requests_seconds_max{exception="none",method="GET",status="404",uri="NOT_FOUND",} 0.005391171
+http_server_requests_seconds_max{exception="none",method="DELETE",status="200",uri="/api/v1/chats/{chatId}/members/@me",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/tasks/{taskId}/comments/{commentId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/external/v1/requests/{request_context}{?since}",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="201",uri="/api/v1/groups/{groupId}/posts/{postId}/reactions/{reactionType}/@me",} 0.021861367
+http_server_requests_seconds_max{exception="none",method="DELETE",status="204",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/reactions/@me",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/external/v1/requests/{request_context}/errors{?since,cursor}",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v2/menu-items/{menuItemId}/groups",} 0.0
+http_server_requests_seconds_max{exception="none",method="PATCH",status="200",uri="/api/v1/tasks/{taskId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/external/post/v1/posts/{postId}",} 0.033853636
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/tasks/{taskId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/internal/tenants/{tenant}/tasks/{taskId}/members",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="403",uri="/api/v1/chats/{chatId}/members-v2",} 0.0
+http_server_requests_seconds_max{exception="none",method="DELETE",status="204",uri="/api/v2/users/@me/bookmarks/{post_id}",} 0.0
+http_server_requests_seconds_max{exception="none",method="PATCH",status="200",uri="/api/v1/chats/{chatId}/members",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/posts",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v2/users/@me/bookmarks",} 0.008765824
+http_server_requests_seconds_max{exception="none",method="PUT",status="200",uri="/api/v2/users/@me/profile",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v2/users/@me",} 0.004096846
+http_server_requests_seconds_max{exception="none",method="DELETE",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="DELETE",status="200",uri="/internal/keycloak/users/{userId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="PUT",status="410",uri="/api/v1/tasks/{taskId}/recipients/@me",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/files/video-conversions/{videoId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/last-seen",} 0.007984996
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/external/v2/sync/users/group-memberships",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="202",uri="/api/external/v1/sync/users/delete",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/internal/tenants/{tenant}/events/{eventId}/members",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/openapi/external/sync",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/internal/users/rejected",} 0.0
+http_server_requests_seconds_max{exception="none",method="PUT",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="410",uri="/api/v1/groups/{groupId}/posts/{postId}/reactions-v2/users",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/chats",} 0.229583561
+http_server_requests_seconds_max{exception="none",method="DELETE",status="200",uri="/api/v1/tasks/{taskId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/internal/metrics",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="201",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/reactions/{reactionType}/@me",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/post-seens",} 0.00151942
+http_server_requests_seconds_max{exception="none",method="GET",status="401",uri="/api/v1/content/notifications/posts/{postId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/groups",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="201",uri="/api/external/post/v1/posts",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/external/v1/sync/users/{externalId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="202",uri="/api/v1/chats/{chatId}/messages/{messageId}/translations",} 0.0
+http_server_requests_seconds_max{exception="none",method="PATCH",status="200",uri="/api/v1/tasks/{taskId}/recipients",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts",} 0.093822502
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/external/post/v1/posts",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/tasks/{taskId}/recipients-v2",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="201",uri="/api/v1/chats",} 0.016992129
+http_server_requests_seconds_max{exception="none",method="PATCH",status="200",uri="/internal/keycloak/users/{userId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="202",uri="/api/external/v1/sync/groups",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v2/menu-items/{menuItemId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="202",uri="/api/external/sync/v3/users",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="410",uri="/api/v1/groups/{groupId}/posts/{postId}/comments",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/leave",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/join",} 0.0
+http_server_requests_seconds_max{exception="none",method="DELETE",status="204",uri="/api/v1/groups/{groupId}/posts/{postId}/reactions/@me",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}",} 0.014966344
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/internal/keycloak/users/{userId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/groups",} 0.0
+http_server_requests_seconds_max{exception="none",method="DELETE",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/content/newsfeed/last-seen",} 0.019414586
+http_server_requests_seconds_max{exception="none",method="POST",status="201",uri="/api/v2/users/@me/absences",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v2/menu-items",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/external/post/v1/posts/{postId}/post-seen-count",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/internal/keycloak/users",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/chats/{chatId}/messages/{messageId}/reactions/users",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="403",uri="/api/v1/groups/{groupId}/posts/{postId}/comments",} 0.0
+http_server_requests_seconds_max{exception="none",method="PUT",status="200",uri="/api/v2/menu-items/{menuItemId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v2/users/{userId}",} 0.003587856
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/chats/{chatId}/messages/{messageId}/translations",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="201",uri="/api/v2/menu-items",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/calendars/events/{eventId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="403",uri="/api/v1/chats/{chatId}/messages",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="202",uri="/api/v1/groups/{groupId}/posts/{postId}/translations",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/tasks/completed",} 0.010268152
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/files/media-conversions/{mediaId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="PUT",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/surveys/votes",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/external/v1/sync/users{?pageSize,page}",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/groups/{groupId}/posts/{postId}/comments/{commentId}/translations",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/content/newsfeed",} 0.135243302
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/health",} 0.002191834
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/files/upload-urls",} 0.001722828
+http_server_requests_seconds_max{exception="none",method="POST",status="201",uri="/api/v1/calendars/{calendarOwnerId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="DELETE",status="204",uri="/api/v1/chats/{chatId}/messages/{messageId}/reactions/@me",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/activities",} 0.179133091
+http_server_requests_seconds_max{exception="none",method="PATCH",status="410",uri="/api/v1/tasks/{taskId}",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="201",uri="/api/v1/tasks",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/settings/notification/quiet-time",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v1/chats/{chatId}/last-seen",} 0.005711187
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v2/users/@me/absences",} 0.0
+http_server_requests_seconds_max{exception="none",method="POST",status="200",uri="/api/v2/users/@me/devices",} 0.009305745
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/tasks",} 0.099523643
+http_server_requests_seconds_max{exception="none",method="PUT",status="200",uri="/api/v1/tasks/{taskId}/recipients/@me",} 0.011520338
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/external/post/v2/posts",} 0.0
+http_server_requests_seconds_max{exception="none",method="PATCH",status="200",uri="/api/v1/groups/{groupId}/members",} 0.0
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/content/notifications/posts/{postId}",} 0.006721996
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/groups/{groupId}/members-v2",} 0.189245524
+http_server_requests_seconds_max{exception="none",method="GET",status="200",uri="/api/v1/calendars/{calendarOwnerId}",} 0.00373635
+# HELP jvm_gc_memory_promoted_bytes_total Count of positive increases in the size of the old generation memory pool before GC to after GC
+# TYPE jvm_gc_memory_promoted_bytes_total counter
+jvm_gc_memory_promoted_bytes_total 1.109716976E9
+# HELP executor_seconds  
+# TYPE executor_seconds summary
+executor_seconds_count{name="io",} 1535833.0
+executor_seconds_sum{name="io",} 11080.503557612
+executor_seconds_count{name="scheduled",} 20373.0
+executor_seconds_sum{name="scheduled",} 228.950490083
+executor_seconds_count{name="consumer",} 0.0
+executor_seconds_sum{name="consumer",} 0.0
+# HELP executor_seconds_max  
+# TYPE executor_seconds_max gauge
+executor_seconds_max{name="io",} 0.317621032
+executor_seconds_max{name="scheduled",} 0.851876926
+executor_seconds_max{name="consumer",} 0.0
+# HELP hikaricp_connections_pending Pending threads
+# TYPE hikaricp_connections_pending gauge
+hikaricp_connections_pending{pool="HikariPool-1",} 0.0
+# HELP rabbitmq_failed_to_publish_total  
+# TYPE rabbitmq_failed_to_publish_total counter
+rabbitmq_failed_to_publish_total 0.0
+# HELP process_cpu_usage The "recent cpu usage" for the Java Virtual Machine process
+# TYPE process_cpu_usage gauge
+process_cpu_usage 0.0272
+# HELP hikaricp_connections_idle Idle connections
+# TYPE hikaricp_connections_idle gauge
+hikaricp_connections_idle{pool="HikariPool-1",} 13.0
+# HELP rabbitmq_acknowledged_total  
+# TYPE rabbitmq_acknowledged_total counter
+rabbitmq_acknowledged_total 0.0
+# HELP hikaricp_connections_active Active connections
+# TYPE hikaricp_connections_active gauge
+hikaricp_connections_active{pool="HikariPool-1",} 1.0
+# HELP jvm_gc_memory_allocated_bytes_total Incremented for an increase in the size of the (young) heap memory pool after one GC to before the next
+# TYPE jvm_gc_memory_allocated_bytes_total counter
+jvm_gc_memory_allocated_bytes_total 1.926007619472E12
+# HELP logback_events_total Number of events that made it to the logs
+# TYPE logback_events_total counter
+logback_events_total{level="warn",} 51804.0
+logback_events_total{level="debug",} 0.0
+logback_events_total{level="trace",} 0.0
+logback_events_total{level="error",} 0.0
+logback_events_total{level="info",} 1038722.0
+# HELP hikaricp_connections_acquire_seconds Connection acquire time
+# TYPE hikaricp_connections_acquire_seconds summary
+hikaricp_connections_acquire_seconds_count{pool="HikariPool-1",} 2002441.0
+hikaricp_connections_acquire_seconds_sum{pool="HikariPool-1",} 54.714204127
+# HELP hikaricp_connections_acquire_seconds_max Connection acquire time
+# TYPE hikaricp_connections_acquire_seconds_max gauge
+hikaricp_connections_acquire_seconds_max{pool="HikariPool-1",} 0.004785763
+# HELP cache_evictions_total The number of times the cache was evicted.
+# TYPE cache_evictions_total counter
+cache_evictions_total{cache="users",} 4832.0
+cache_evictions_total{cache="feature_toggles",} 8178.0
+cache_evictions_total{cache="post_comment",} 445.0
+cache_evictions_total{cache="chats",} 1767.0
+cache_evictions_total{cache="tasks",} 39.0
+cache_evictions_total{cache="messages",} 2465.0
+cache_evictions_total{cache="groups",} 1736.0
+cache_evictions_total{cache="published_posts",} 2692.0
+# HELP system_cpu_count The number of processors available to the Java virtual machine
+# TYPE system_cpu_count gauge
+system_cpu_count 3.0
+# HELP rabbitmq_not_acknowledged_published_total  
+# TYPE rabbitmq_not_acknowledged_published_total counter
+rabbitmq_not_acknowledged_published_total 0.0
+# HELP cache_puts_total The number of entries added to the cache
+# TYPE cache_puts_total counter
+cache_puts_total{cache="users",} 0.0
+cache_puts_total{cache="feature_toggles",} 0.0
+cache_puts_total{cache="post_comment",} 0.0
+cache_puts_total{cache="chats",} 0.0
+cache_puts_total{cache="tasks",} 0.0
+cache_puts_total{cache="messages",} 0.0
+cache_puts_total{cache="groups",} 0.0
+cache_puts_total{cache="published_posts",} 0.0
+# HELP cache_eviction_weight The sum of weights of evicted entries. This total does not include manual invalidations.
+# TYPE cache_eviction_weight gauge
+cache_eviction_weight{cache="users",} 4832.0
+cache_eviction_weight{cache="feature_toggles",} 8178.0
+cache_eviction_weight{cache="post_comment",} 445.0
+cache_eviction_weight{cache="chats",} 1767.0
+cache_eviction_weight{cache="tasks",} 39.0
+cache_eviction_weight{cache="messages",} 2465.0
+cache_eviction_weight{cache="groups",} 1736.0
+cache_eviction_weight{cache="published_posts",} 2692.0
+# HELP system_load_average_1m The sum of the number of runnable entities queued to available processors and the number of runnable entities running on the available processors averaged over a period of time
+# TYPE system_load_average_1m gauge
+system_load_average_1m 0.57
+# HELP jvm_memory_max_bytes The maximum amount of memory in bytes that can be used for memory management
+# TYPE jvm_memory_max_bytes gauge
+jvm_memory_max_bytes{area="nonheap",id="CodeHeap 'profiled nmethods'",} 1.22912768E8
+jvm_memory_max_bytes{area="heap",id="G1 Survivor Space",} -1.0
+jvm_memory_max_bytes{area="heap",id="G1 Old Gen",} 6.803161088E9
+jvm_memory_max_bytes{area="nonheap",id="Metaspace",} -1.0
+jvm_memory_max_bytes{area="heap",id="G1 Eden Space",} -1.0
+jvm_memory_max_bytes{area="nonheap",id="CodeHeap 'non-nmethods'",} 5828608.0
+jvm_memory_max_bytes{area="nonheap",id="Compressed Class Space",} 1.073741824E9
+jvm_memory_max_bytes{area="nonheap",id="CodeHeap 'non-profiled nmethods'",} 1.22916864E8
+# HELP process_uptime_seconds The uptime of the Java virtual machine
+# TYPE process_uptime_seconds gauge
+process_uptime_seconds 61445.276
+# HELP executor_completed_tasks_total The approximate total number of tasks that have completed execution
+# TYPE executor_completed_tasks_total counter
+executor_completed_tasks_total{name="io",} 1535836.0
+executor_completed_tasks_total{name="scheduled",} 20373.0
+executor_completed_tasks_total{name="consumer",} 0.0
+# HELP jvm_classes_loaded_classes The number of classes that are currently loaded in the Java virtual machine
+# TYPE jvm_classes_loaded_classes gauge
+jvm_classes_loaded_classes 21361.0
+# HELP process_start_time_seconds Start time of the process since unix epoch.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.682688796837E9
+# HELP rabbitmq_consumed_total  
+# TYPE rabbitmq_consumed_total counter
+rabbitmq_consumed_total 0.0
+# HELP jvm_gc_max_data_size_bytes Max size of long-lived heap memory pool
+# TYPE jvm_gc_max_data_size_bytes gauge
+jvm_gc_max_data_size_bytes NaN
+# HELP jvm_gc_live_data_size_bytes Size of long-lived heap memory pool after reclamation
+# TYPE jvm_gc_live_data_size_bytes gauge
+jvm_gc_live_data_size_bytes NaN
+# HELP rabbitmq_channels  
+# TYPE rabbitmq_channels gauge
+rabbitmq_channels 2.0
+# HELP jvm_buffer_total_capacity_bytes An estimate of the total capacity of the buffers in this pool
+# TYPE jvm_buffer_total_capacity_bytes gauge
+jvm_buffer_total_capacity_bytes{id="mapped - 'non-volatile memory'",} 0.0
+jvm_buffer_total_capacity_bytes{id="direct",} 3.9379457E7
+jvm_buffer_total_capacity_bytes{id="mapped",} 0.0
+# HELP hikaricp_connections_creation_seconds_max Connection creation time
+# TYPE hikaricp_connections_creation_seconds_max gauge
+hikaricp_connections_creation_seconds_max{pool="HikariPool-1",} 0.0
+# HELP hikaricp_connections_creation_seconds Connection creation time
+# TYPE hikaricp_connections_creation_seconds summary
+hikaricp_connections_creation_seconds_count{pool="HikariPool-1",} 65.0
+hikaricp_connections_creation_seconds_sum{pool="HikariPool-1",} 1.194
+# HELP executor_queue_remaining_tasks The number of additional elements that this queue can ideally accept without blocking
+# TYPE executor_queue_remaining_tasks gauge
+executor_queue_remaining_tasks{name="io",} 0.0
+executor_queue_remaining_tasks{name="scheduled",} 2.147483647E9
+executor_queue_remaining_tasks{name="consumer",} 2.147483647E9
+# HELP jvm_buffer_memory_used_bytes An estimate of the memory that the Java virtual machine is using for this buffer pool
+# TYPE jvm_buffer_memory_used_bytes gauge
+jvm_buffer_memory_used_bytes{id="mapped - 'non-volatile memory'",} 0.0
+jvm_buffer_memory_used_bytes{id="direct",} 3.9379458E7
+jvm_buffer_memory_used_bytes{id="mapped",} 0.0
+# HELP process_files_open_files The open file descriptor count
+# TYPE process_files_open_files gauge
+process_files_open_files 59.0
+# HELP cache_size The number of entries in this cache. This may be an approximation, depending on the type of cache.
+# TYPE cache_size gauge
+cache_size{cache="users",} 38.0
+cache_size{cache="feature_toggles",} 51.0
+cache_size{cache="post_comment",} 18.0
+cache_size{cache="chats",} 19.0
+cache_size{cache="tasks",} 1.0
+cache_size{cache="messages",} 21.0
+cache_size{cache="groups",} 13.0
+cache_size{cache="published_posts",} 13.0
+# HELP jvm_memory_committed_bytes The amount of memory in bytes that is committed for the Java virtual machine to use
+# TYPE jvm_memory_committed_bytes gauge
+jvm_memory_committed_bytes{area="nonheap",id="CodeHeap 'profiled nmethods'",} 4.9414144E7
+jvm_memory_committed_bytes{area="heap",id="G1 Survivor Space",} 1.6777216E7
+jvm_memory_committed_bytes{area="heap",id="G1 Old Gen",} 8.13694976E8
+jvm_memory_committed_bytes{area="nonheap",id="Metaspace",} 1.48242432E8
+jvm_memory_committed_bytes{area="heap",id="G1 Eden Space",} 8.43055104E8
+jvm_memory_committed_bytes{area="nonheap",id="CodeHeap 'non-nmethods'",} 2555904.0
+jvm_memory_committed_bytes{area="nonheap",id="Compressed Class Space",} 2.1102592E7
+jvm_memory_committed_bytes{area="nonheap",id="CodeHeap 'non-profiled nmethods'",} 4.4498944E7
+# HELP jvm_threads_live_threads The current number of live threads including both daemon and non-daemon threads
+# TYPE jvm_threads_live_threads gauge
+jvm_threads_live_threads 47.0
+# HELP system_cpu_usage The "recent cpu usage" of the system the application is running in
+# TYPE system_cpu_usage gauge
+system_cpu_usage 0.02732072
+# HELP jvm_gc_pause_seconds Time spent in GC pause
+# TYPE jvm_gc_pause_seconds summary
+jvm_gc_pause_seconds_count{action="end of minor GC",cause="Metadata GC Threshold",} 2.0
+jvm_gc_pause_seconds_sum{action="end of minor GC",cause="Metadata GC Threshold",} 0.028
+jvm_gc_pause_seconds_count{action="end of minor GC",cause="GCLocker Initiated GC",} 12.0
+jvm_gc_pause_seconds_sum{action="end of minor GC",cause="GCLocker Initiated GC",} 0.164
+jvm_gc_pause_seconds_count{action="end of minor GC",cause="G1 Evacuation Pause",} 2068.0
+jvm_gc_pause_seconds_sum{action="end of minor GC",cause="G1 Evacuation Pause",} 30.628
+jvm_gc_pause_seconds_count{action="end of minor GC",cause="G1 Preventive Collection",} 2.0
+jvm_gc_pause_seconds_sum{action="end of minor GC",cause="G1 Preventive Collection",} 0.022
+# HELP jvm_gc_pause_seconds_max Time spent in GC pause
+# TYPE jvm_gc_pause_seconds_max gauge
+jvm_gc_pause_seconds_max{action="end of minor GC",cause="Metadata GC Threshold",} 0.0
+jvm_gc_pause_seconds_max{action="end of minor GC",cause="GCLocker Initiated GC",} 0.0
+jvm_gc_pause_seconds_max{action="end of minor GC",cause="G1 Evacuation Pause",} 0.022
+jvm_gc_pause_seconds_max{action="end of minor GC",cause="G1 Preventive Collection",} 0.0
+# HELP jvm_threads_peak_threads The peak live thread count since the Java virtual machine started or peak was reset
+# TYPE jvm_threads_peak_threads gauge
+jvm_threads_peak_threads 92.0
+# HELP hikaricp_connections_usage_seconds Connection usage time
+# TYPE hikaricp_connections_usage_seconds summary
+hikaricp_connections_usage_seconds_count{pool="HikariPool-1",} 2002439.0
+hikaricp_connections_usage_seconds_sum{pool="HikariPool-1",} 9132.268
+# HELP hikaricp_connections_usage_seconds_max Connection usage time
+# TYPE hikaricp_connections_usage_seconds_max gauge
+hikaricp_connections_usage_seconds_max{pool="HikariPool-1",} 0.287
+# HELP rabbitmq_unrouted_published_total  
+# TYPE rabbitmq_unrouted_published_total counter
+rabbitmq_unrouted_published_total 0.0

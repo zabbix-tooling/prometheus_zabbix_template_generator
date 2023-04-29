@@ -1,0 +1,51 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2023-04-29T09:18:29Z",
+        "groups": [
+            {
+                "uuid": "7df96b18c230490a9a0a9e2307226338",
+                "name": "Templates"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "937de537759d4357861d1ddb1d9de173",
+                "template": "Custom - PROM2ZABBIX_TEMPLATE_NAME",
+                "name": "Custom - PROM2ZABBIX_TEMPLATE_NAME",
+                "groups": [
+                    {
+                        "name": "Templates"
+                    }
+                ],
+                "items": [
+                    {
+                        "uuid": "bd5b4f1462264d3a95ace4008e09b767",
+                        "name": "PROM2ZABBIX_ITEM_NAME",
+                        "type": "EXTERNAL",
+                        "key": "prom2zabbix[PROM2ZABBIX_ITEM_KEY]",
+                        "delay": "2m",
+                        "history": "7d",
+                        "trends": "90d",
+                        "status": "DISABLED",
+                        "value_type": "FLOAT",
+                        "description": "Template",
+                        "tags": [
+                            {
+                                "tag": "PROM2ZABBIX_TAG",
+                                "value": "prometheus"
+                            }
+                        ]
+                    }
+                ],
+                "macros": [
+                    {
+                        "macro": "{$PROM2ZABBIX_MACRO}",
+                        "value": "yolo",
+                        "description": "yolo"
+                    }
+                ]
+            }
+        ]
+    }
+}
