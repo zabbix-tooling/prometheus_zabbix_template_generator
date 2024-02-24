@@ -35,7 +35,7 @@ class ZabbixItem:
 
     def _get_item_definition(self, item_template: dict, name: str, template_uuid: str) -> dict:
         new_item = copy.deepcopy(item_template)
-        new_item["uuid"] = str(uuid.uuid5(uuid.NAMESPACE_DNS, name + template_uuid)).replace("-", "")
+        new_item["uuid"] = str(uuid.uuid4()).replace("-", "")
         new_item["description"] = self.help
         new_item["key"] = new_item["key"].replace("PROM2ZABBIX_ITEM_KEY", self.label)
         new_item["name"] = new_item["name"].replace("PROM2ZABBIX_ITEM_NAME", self.label)
@@ -86,7 +86,7 @@ class PrometheusExporterParser:
     def generate_template(self, name: str | None):
         file_name = None
         if name:
-            template_uuid = str(uuid.uuid5(uuid.NAMESPACE_DNS, name)).replace("-", "")
+            template_uuid = str(uuid.uuid4()).replace("-", "")
             file_name = f"{name}.json".replace(" ", "_")
         else:
             template_uuid = str(uuid.uuid4()).replace("-", "")
