@@ -1,48 +1,78 @@
 {
     "zabbix_export": {
         "version": "6.0",
-        "date": "2023-04-29T09:18:29Z",
+        "date": "2024-02-24T09:18:29Z",
         "groups": [
             {
-                "uuid": "7df96b18c230490a9a0a9e2307226338",
-                "name": "Templates"
+                "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+                "name": "Templates/Applications"
             }
         ],
         "templates": [
             {
                 "uuid": "937de537759d4357861d1ddb1d9de173",
-                "template": "Custom - PROM2ZABBIX_TEMPLATE_NAME",
-                "name": "Custom - PROM2ZABBIX_TEMPLATE_NAME",
+                "template": "PROM2ZABBIX_TEMPLATE_NAME",
+                "name": "PROM2ZABBIX_TEMPLATE_NAME",
                 "groups": [
                     {
-                        "name": "Templates"
+                        "name": "Templates/Applications"
                     }
                 ],
                 "items": [
                     {
                         "uuid": "bd5b4f1462264d3a95ace4008e09b767",
-                        "name": "PROM2ZABBIX_ITEM_NAME",
-                        "type": "EXTERNAL",
+                        "name": "raw data",
+                        "type": "HTTP_AGENT",
+                        "key": "prom2zabbix",
+                        "trends": "0",
+                        "status": "DISABLED",
+                        "value_type": "TEXT",
+                        "description": "Prometheus endpoint raw data",
+                        "url": "{$PROM2ZABBIX_ENDPOINT}/metrics",
+                        "tags": [
+                            {
+                                "tag": "Application",
+                                "value": "PROM2ZABBIX_TAG"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "7eae05fb4e2a4c13a091bd3b84f4e60c",
+                        "name": "item example",
+                        "type": "DEPENDENT",
                         "key": "prom2zabbix[PROM2ZABBIX_ITEM_KEY]",
                         "delay": "2m",
                         "history": "7d",
                         "trends": "90d",
                         "status": "DISABLED",
                         "value_type": "FLOAT",
-                        "description": "Template",
+                        "description": "Prometheus item",
+                        "preprocessing": [
+                            {
+                                "type": "PROMETHEUS_PATTERN",
+                                "parameters": [
+                                    "PROM2ZABBIX_ITEM_KEY",
+                                    "value",
+                                    ""
+                                ]
+                            }
+                        ],
+                        "master_item": {
+                            "key": "prom2zabbix"
+                        },
                         "tags": [
                             {
-                                "tag": "PROM2ZABBIX_TAG",
-                                "value": "prometheus"
+                                "tag": "Application",
+                                "value": "PROM2ZABBIX_TAG"
                             }
                         ]
                     }
                 ],
                 "macros": [
                     {
-                        "macro": "{$PROM2ZABBIX_MACRO}",
-                        "value": "yolo",
-                        "description": "yolo"
+                        "macro": "{$PROM2ZABBIX_ENDPOINT}",
+                        "value": "http://exporter-endpoint.url:666",
+                        "description": "Prometheus exporter endpoint URL"
                     }
                 ]
             }
