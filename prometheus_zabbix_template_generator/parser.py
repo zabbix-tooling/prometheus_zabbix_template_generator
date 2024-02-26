@@ -35,10 +35,15 @@ class ZabbixItem:
 
     def _get_item_definition(self, item_template: dict, name: str, template_uuid: str) -> dict:
         new_item = copy.deepcopy(item_template)
-        new_item["uuid"] = str(uuid.uuid5(uuid.NAMESPACE_DNS, name + template_uuid)).replace("-", "")
+        new_item["uuid"] = str(uuid.uuid4()).replace("-", "")
         new_item["description"] = self.help
         new_item["key"] = new_item["key"].replace("PROM2ZABBIX_ITEM_KEY", self.label)
         new_item["name"] = new_item["name"].replace("PROM2ZABBIX_ITEM_NAME", self.label)
+        if "preprocessing" in new_item:
+            for i in range(len(new_item["preprocessing"])):
+                for j in range(len(new_item["preprocessing"][i]["parameters"])):
+                    new_item["preprocessing"][i]["parameters"][j] = \
+                        new_item["preprocessing"][i]["parameters"][j].replace("PROM2ZABBIX_ITEM_KEY", self.label)
         return new_item
 
 
@@ -86,7 +91,7 @@ class PrometheusExporterParser:
     def generate_template(self, name: str | None):
         file_name = None
         if name:
-            template_uuid = str(uuid.uuid5(uuid.NAMESPACE_DNS, name)).replace("-", "")
+            template_uuid = str(uuid.uuid4()).replace("-", "")
             file_name = f"{name}.json".replace(" ", "_")
         else:
             template_uuid = str(uuid.uuid4()).replace("-", "")
@@ -101,9 +106,35 @@ class PrometheusExporterParser:
         else:
             name = "DEFAULT"
 
-        item_template = new_template["zabbix_export"]["templates"][0]["items"][0]
+        master_item = None
+        for _item in self.example_template["zabbix_export"]["templates"][0]["items"]:
+            if _item["type"] == "HTTP_AGENT":
+                master_item = copy.deepcopy(_item)
+                break
+        item_template = None
+        if master_item:
+            for _item in self.example_template["zabbix_export"]["templates"][0]["items"]:
+                if _item["type"] == "DEPENDENT":
+                    item_template = copy.deepcopy(_item)
+                    break
+        else:
+            item_template = self.example_template["zabbix_export"]["templates"][0]["items"][0]
+        if item_template is None:
+            # TODO: proper error handling
+            print("ERROR: no dependent items in the example template")
+            exit(1)
 
         new_template["zabbix_export"]["templates"][0]["items"] = []
+        if master_item:
+            item = ZabbixItem()
+            item.label = ""
+            item.help = master_item["description"] or ""
+            new_template["zabbix_export"]["templates"][0]["items"].append(
+                item._get_item_definition(
+                    item_template=master_item,
+                    name=name,
+                    template_uuid=template_uuid)
+            )
         for item in self.collected_items.values():
             new_template["zabbix_export"]["templates"][0]["items"].append(
                 item._get_item_definition(
