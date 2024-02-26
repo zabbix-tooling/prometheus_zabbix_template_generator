@@ -38,7 +38,7 @@
                     },
                     {
                         "uuid": "7eae05fb4e2a4c13a091bd3b84f4e60c",
-                        "name": "item example",
+                        "name": "PROM2ZABBIX_ITEM_NAME",
                         "type": "DEPENDENT",
                         "key": "prom2zabbix[PROM2ZABBIX_ITEM_KEY]",
                         "delay": "2m",
